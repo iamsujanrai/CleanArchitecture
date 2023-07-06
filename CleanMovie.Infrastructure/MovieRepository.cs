@@ -12,12 +12,6 @@ namespace CleanMovie.Infrastructure
             _context = context;
         }
 
-        public static List<Movie> movies = new List<Movie>
-        {
-            new Movie {Id= 1, Name ="Passion of Christ", Price =200 },
-            new Movie {Id= 2, Name ="Home Alone", Price =300 }
-        };
-
         public Movie CreateMovie(Movie movie)
         {
             _context.Movies.Add(movie);
