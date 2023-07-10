@@ -19,4 +19,12 @@
     <ProjectReference Include="..\CleanMovie.Infrastructure\CleanMovie.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="Z:\Projects\Personal\CleanArchitecture\CleanMovie.Domain\CleanMovie.API\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Z:\Projects\Personal\CleanArchitecture\CleanMovie.Domain\CleanMovie.API\.editorconfig" />
+  </ItemGroup>
+
 </Project>

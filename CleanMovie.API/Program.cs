@@ -14,12 +14,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Add Database Services
-builder.Services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
-        b => b.MigrationsAssembly("CleanMovie.API")));
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 
+//Implement Infrastructure DependencyInjection Container
+builder.Services.ImplementPersistence(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
